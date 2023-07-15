@@ -92,7 +92,10 @@
 // };
 
 const parse = require("pg-connection-string").parse;
-const config = parse(process.env.DATABASE_URL);
+const config = parse(
+  process.env.DATABASE_URL ||
+    "restaurant-app-backend-strapi-d2f56ca44dd9.herokuapp.com"
+);
 module.exports = ({ env }) => ({
   connection: {
     client: "postgres",
