@@ -10,7 +10,7 @@
 //   },
 // });
 module.exports = ({ env }) => ({
-  url: env("https://strapi-food-ordering-app.herokuapp.com/"),
+  url: env("https://restaurant-app-backend-strapi-d2f56ca44dd9.herokuapp.com/"),
   proxy: true,
   app: {
     keys: env.array("APP_KEYS", ["testKey1", "testKey2"]),
