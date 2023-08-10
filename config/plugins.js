@@ -15,5 +15,8 @@ module.exports = ({ env }) => ({
       },
     },
   },
+  "google-auth": {
+    enabled: true,
+  },
   // ...
 });
