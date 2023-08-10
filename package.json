@@ -23,7 +23,7 @@
     "stripe": "^12.11.0"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Jennifer Hu"
   },
   "strapi": {
     "uuid": "8ad34081-3afb-49d0-ad4c-cdf5f5e44a2d"
