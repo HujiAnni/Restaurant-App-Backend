@@ -19,6 +19,7 @@
     "cloudinary": "^1.40.0",
     "pg": "^8.11.1",
     "pg-connection-string": "^2.6.1",
+    "strapi-google-auth": "^0.1.2",
     "stripe": "^12.11.0"
   },
   "author": {
