@@ -212,7 +212,7 @@ module.exports = ({ env }) => {
       connection: {
         connectionString: env("DATABASE_URL"),
         // host: env("DATABASE_HOST", "127.0.0.1"),
-        host: env("DATABASE_HOST", "0.0.0.0"),
+        host: env("DATABASE_HOST", "127.0.0.1"),
         port: env.int("DATABASE_PORT", 5432),
         database: env("DATABASE_NAME", "strapi"),
         user: env("DATABASE_USERNAME", "strapi"),
@@ -229,10 +229,18 @@ module.exports = ({ env }) => {
           ),
         },
       },
+      acquireConnectionTimeout: 1000000,
       pool: {
-        min: env.int("DATABASE_POOL_MIN", 2),
-        max: env.int("DATABASE_POOL_MAX", 10),
+        min: 0,
+        max: 5,
+        acquireTimeoutMillis: 300000,
+        createTimeoutMillis: 300000,
+        destroyTimeoutMillis: 300000,
+        idleTimeoutMillis: 30000,
+        reapIntervalMillis: 1000,
+        createRetryIntervalMillis: 2000,
       },
+      debug: false,
     },
     postgres: {
       connection: {
